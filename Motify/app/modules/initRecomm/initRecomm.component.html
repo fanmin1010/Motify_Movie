@@ -1,0 +1,25 @@
+<ActionBar title="initRecomm">
+</ActionBar>
+
+<side-drawer-page>
+    <GridLayout class="initRecomm-page p-30">
+        <!--<Label-->
+                <!--class="h1 page-text"-->
+                <!--[text]="text"-->
+                <!--textWrap="true">-->
+        <!--</Label>-->
+        <!--<Image [src]="imageUrl" width="100" height="100"></Image>-->
+
+        <GridLayout columns="*,*,*,*,*,*,*,*,*,*" rows="*,*,*,*,*,*,*,*,*,*,*,*" sdkExampleTitle sdkToggleNavButton>
+            <Label #TitleContainer  textWrap="true" row="0" colSpan="10" text="Loading..." class="h2"></Label>
+            <Image #ImageContainer row="1" col="3" colSpan="5" rowSpan="5"></Image>
+            <!--<Button text="2" col="1" style="background-color: #FFFF66; margin: 5;"></Button>-->]
+            <Label #OverviewContainer  textWrap="true" text="2" row="6" colSpan="10" rowSpan="5"></Label>
+            <!--<Button text="5" row="2" col="2" style="background-color: #CCFFFF; margin: 5;"></Button>-->
+            <!--<Button text="6" row="3" colSpan="3" style="background-color: #0099CC; margin: 5;"></Button>-->
+            <TextField [(ngModel)]="rating" hint="rank" style="background-color: #AA0078; margin: 5;" row="11" colspan="2" style="background-color:#EEEEEE "></TextField>
+            <Button text="Next" style="background-color: #AA0078; margin: 5;" row="11" col="2" colspan="5" style="background-color: #FFFFFF" (tap)="onSkip()"></Button>
+            <Button text="Submit" style="background-color: #AA0078; margin: 5;" row="11" col="5" colspan="5" style="background-color: #FFFFFF" (tap)="onRatingSubmit()"></Button>
+        </GridLayout>
+    </GridLayout>
+</side-drawer-page>

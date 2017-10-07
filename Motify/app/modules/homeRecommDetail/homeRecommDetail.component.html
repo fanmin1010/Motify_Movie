@@ -1,0 +1,24 @@
+<ActionBar title="Movie Detail">
+</ActionBar>
+
+
+<!--public rank: string = '';-->
+<!--public overview: string = '';-->
+<!--public id: string = '';-->
+<!--public thumbposterUrl: string = '';-->
+<!--public releasedate: string = '';-->
+<!--public title: string = '';-->
+<!--public vote: string = '';-->
+
+<side-drawer-page>
+    <GridLayout class="recommendation-detail-page p-30">
+        <GridLayout columns="*,*,*,*,*,*,*,*,*,*" rows="*,*,*,*,*,*,*,*,*,*,*,*" sdkExampleTitle sdkToggleNavButton>
+            <Label  textWrap="true" row="0" colSpan="10" [text]="movieRecommDetail.title" class="h2"></Label>
+            <Label textWrap="true" row="1" colSpan="10" [text]=" movieRecommDetail.rank"></Label>
+            <Image row="2" colSpan="5" rowSpan="5" [src]="movieRecommDetail.thumbposterUrl"></Image>
+            <Label textWrap="true" text="2" row="8" colSpan="10" rowSpan="5" [text]="movieRecommDetail.overview"></Label>
+        </GridLayout>
+    </GridLayout>
+</side-drawer-page>
+
+

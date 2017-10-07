@@ -1,0 +1,47 @@
+<ActionBar title="Search">
+</ActionBar>
+
+<side-drawer-page>
+  <StackLayout class="p-30">
+          <TextField hint="Search Something, then keyStrokes..." autocorrect="false" autocapitalizationType="none" [(ngModel)]="querystring"></TextField>
+          <Button text="Search" (tap)="executesearch($event)"></Button>
+      <StackLayout>
+      <ListView [items]="SearchMovieResultList" class="list-group">
+          <template let-movie="item" >
+              <GridLayout columns="50, *" rows="*" class="item item-thumbnail">
+                  <image [src]="movie.thumbposterUrl" col="0" (tap)="onTap(movie)"></image>
+                  <stack-layout col="1">
+                      <Label [text]="movie.title" textWrap="true" class="h2" col="1"></Label>
+                      <label [text]="'Score: '+movie.vote" class="p" col="1"></label>
+                      <label [text]="'Release Date: '+movie.releaseDate" class="p" col="1"></label>
+                      <!--<label [text]="movie.overview" textWrap="true" class="p" col="1"></label>-->
+                  </stack-layout>
+              </GridLayout>
+          </template>
+      </ListView>
+      </StackLayout>
+  </StackLayout>
+</side-drawer-page>
+
+
+<!--<ActionBar title="Trend">-->
+<!--</ActionBar>-->
+
+<!--<side-drawer-page>-->
+    <!--<GridLayout class="p-30">-->
+        <!--<ListView [items]="MovieList" class="list-group">-->
+            <!--<template let-movie="item" >-->
+                <!--<GridLayout columns="50, *" rows="*" class="item item-thumbnail">-->
+                    <!--<image [src]="movie.thumbposterUrl" col="0"></image>-->
+                    <!--<stack-layout col="1">-->
+                        <!--<Label [text]="movie.title" textWrap="true" class="h2" col="1"></Label>-->
+                        <!--<label [text]="'Score: '+movie.vote" class="p" col="1"></label>-->
+                        <!--<label [text]="'Release Date: '+movie.releaseDate" class="p" col="1"></label>-->
+                        <!--<label [text]="movie.overview" textWrap="true" class="p" col="1"></label>-->
+                    <!--</stack-layout>-->
+                <!--</GridLayout>-->
+            <!--</template>-->
+        <!--</ListView>-->
+    <!--</GridLayout>-->
+<!--</side-drawer-page>-->
+
